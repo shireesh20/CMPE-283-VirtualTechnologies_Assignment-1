@@ -17,15 +17,28 @@ Demo Screenshots
 
 1.Pinbased (provided by professor Mike as codebase)
 
+<img width="644" alt="image" src="https://github.com/upasanakr/CMPE-283-VirtualTechnologies_Assignment-1/assets/144417727/a5b8fdc2-0bcb-428b-a2ba-eb209090e9e0">
+
 2.Primary ProcBased Controls
+
+<img width="719" alt="image" src="https://github.com/upasanakr/CMPE-283-VirtualTechnologies_Assignment-1/assets/144417727/d2f79b38-e127-41b6-aec6-730f7b9d528c">
+
 
 3.Secondary ProcBased Controls
 
-4.Tertiary ProcBased Controls
+<img width="719" alt="image" src="https://github.com/upasanakr/CMPE-283-VirtualTechnologies_Assignment-1/assets/144417727/4dfe6364-2c7a-42bb-96bc-de12954585e5">
 
-5.Exit Controls
 
-6.Entry Controls
+
+4.Exit Controls
+
+<img width="719" alt="image" src="https://github.com/upasanakr/CMPE-283-VirtualTechnologies_Assignment-1/assets/144417727/cd7238e5-587f-4757-a9b5-569d4adc997d">
+
+
+5.Entry Controls and Tertiary
+
+<img width="719" alt="image" src="https://github.com/upasanakr/CMPE-283-VirtualTechnologies_Assignment-1/assets/144417727/fb9bdf3f-2d00-4768-9886-f3674f8b45d9">
+
 
 
 
