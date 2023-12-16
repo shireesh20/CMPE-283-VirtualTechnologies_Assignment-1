@@ -47,9 +47,9 @@ Questions:-
 1. For each member in your team, provide 1 paragraph detailing what parts of the lab that member
 implemented / researched.
 
-Upasana Kumar:-
+Shireesh was responsible for configuring the Google Cloud Platform virtual machine, ensuring the correct settings for nested virtualization were enabled, a foundational step for the project. After setting up the environment, he created a dedicated project directory and proceeded to download the essential cmpe283-1.c source file and Makefile from Canvas. He tackled the implementation of primary and secondary MSR controls within the cmpe283.c file. This task required careful adherence to the professor's instructional video and a deep understanding of the Intel SDM volume 3 documentation. His work was critical in laying the groundwork for the kernel module development, ensuring the initial codebase was robust and well-structured.
 
-Shireesh Vennamaneni:-
+Upasana focused on the latter stages of the assignment, building upon the groundwork established by Shireesh. Her primary responsibility was to enhance the kernel module by adding functionality for querying exit, entry, and tertiary-based MSR controls. This task required a comprehensive understanding of the Intel SDM volume 3 and the ability to interpret and apply complex technical guidelines into practical code, as detailed in the professor's video lecture. She  managed the compilation process, resulting in the creation of .o and .ko files, and played a key role in testing the module through the use of insmod and rmmod tools. Used the dmesg command to review system log messages, was crucial in verifying the successful implementation and functionality of the kernel module.
 
 
 
