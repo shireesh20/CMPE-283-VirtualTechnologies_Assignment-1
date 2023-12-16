@@ -43,8 +43,8 @@ Our goal is to identify specific features on our GCP VM.
 
 
 
-## Questions:-
-<br />
+## Questions:-  
+
 1. For each member in your team, provide 1 paragraph detailing what parts of the lab that member
 implemented/researched.
 
@@ -52,8 +52,7 @@ implemented/researched.
 
 	Upasana focused on the latter stages of the assignment, building upon the groundwork established by Shireesh. Her primary responsibility was to enhance the kernel module by adding functionality for querying exit, entry, and tertiary-based MSR controls. This task required a comprehensive understanding of the Intel SDM volume 3 and the ability to interpret and apply complex technical guidelines into practical code, as detailed in the professor's video lecture. She  managed the compilation process, resulting in the creation of .o and .ko files, and played a key role in testing the module through the use of insmod and rmmod tools. Used the dmesg command to review system log messages, was crucial in verifying the successful implementation and functionality of the kernel module.
 
-<br  />
-2. Describe in detail the steps you used to complete the assignment.
+3. Describe in detail the steps you used to complete the assignment.
 
 Step-1. Create a GCP account. You'll get 300$ credit if you signup with student account<br  />
 Step-2. Create a project in GCP and create a VM in the project using the command<br  />
