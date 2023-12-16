@@ -13,7 +13,7 @@ Assignment Details:-
 We reviewed the Intel SDM supplied by our professor and the lecture related to this assignment.
 Our goal is to identify specific features on our GCP VM.
 
-## Steps to run the assignment
+## Steps to run the code
 
 Step-1. Clone this repository  
 Step-2. Setup the VM and run the code using the steps mentioned in the answer to Question 2 in the Questions section below.  
