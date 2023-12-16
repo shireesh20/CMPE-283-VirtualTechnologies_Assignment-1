@@ -45,30 +45,36 @@ Our goal is to identify specific features on our GCP VM.
 
 ## Questions:-  
 
-1. For each member in your team, provide 1 paragraph detailing what parts of the lab that member
-implemented/researched.
+**1. For each member in your team, provide 1 paragraph detailing what parts of the lab that member
+implemented/researched.**
 
 	Shireesh was responsible for configuring the Google Cloud Platform virtual machine, ensuring the correct settings for nested virtualization were enabled, a foundational step for the project. After setting up the environment, he created a dedicated project directory and proceeded to download the essential cmpe283-1.c source file and Makefile from Canvas. He tackled the implementation of primary and secondary MSR controls within the cmpe283.c file. This task required careful adherence to the professor's instructional video and a deep understanding of the Intel SDM volume 3 documentation. His work was critical in laying the groundwork for the kernel module development, ensuring the initial codebase was robust and well-structured.
 
 	Upasana focused on the latter stages of the assignment, building upon the groundwork established by Shireesh. Her primary responsibility was to enhance the kernel module by adding functionality for querying exit, entry, and tertiary-based MSR controls. This task required a comprehensive understanding of the Intel SDM volume 3 and the ability to interpret and apply complex technical guidelines into practical code, as detailed in the professor's video lecture. She  managed the compilation process, resulting in the creation of .o and .ko files, and played a key role in testing the module through the use of insmod and rmmod tools. Used the dmesg command to review system log messages, was crucial in verifying the successful implementation and functionality of the kernel module.
 
-3. Describe in detail the steps you used to complete the assignment.
+**2. Describe in detail the steps you used to complete the assignment.**  
 
-Step-1. Create a GCP account. You'll get 300$ credit if you signup with student account<br  />
-Step-2. Create a project in GCP and create a VM in the project using the command<br  />
+Step-1. Create a GCP account. You'll get 300$ credit if you signup with student account  
+
+Step-2. Create a project in GCP and create a VM in the project using the command  
+
 ```
 gcloud compute instances create cmpe283-vm-us --enable-nested-virtualization \
 --zone=us-central1-a --machine-type=n2-standard-8 --network-interface=network-tier=PREMIUM,subnet=default \
 --create-disk=auto-delete=yes,boot=yes,device-name=instance-1,image=projects/ubuntu-os-cloud/global/images/ubuntu-2004-focal-v20220204,mode=rw,size=200,type=projects/cmpe-283-f23/zones/us-central1-a/diskTypes/pd-ssd \
 --metadata=ssh-keys="<key>"
 ```
-<br  />
 
-Step-3. Add the ssh keys to the VM<br  />
-Step-4. Verify if nested virtualization is enabled or not using the command<br />
-   ```cat /proc/cpuinfo | grep vmx```<br />
-   This should return vmx flags<br  />
-Step-5. Run the following commands to install requirements<br />
+Step-3. Add the ssh keys to the VM  
+
+Step-4. Verify if nested virtualization is enabled or not using the command  
+
+   ```cat /proc/cpuinfo | grep vmx```  
+   
+   This should return vmx flags  
+   
+Step-5. Run the following commands to install requirements  
+
 ```
 	sudo apt-get update
         sudo apt-get install bison
@@ -78,11 +84,15 @@ Step-5. Run the following commands to install requirements<br />
         sudo apt-get install libssl-dev
         sudo apt-get install libelf-dev
 ```
-<br  />
-Step-6. Fork the linux repo : ```https://github.com/torvalds/linux``` and clone it into your vm.<br  />
-Step-7. ```cp /boot/config-5.11.0-1029-gcp ~/linux/.config``` <br  />
-Step-8. Create a directory cmpe-283 inside the cloned repo<br  />
-Step-9. Copy the files(cmpe283-1.c & Makefile) provided on canvas to the directory<br  />
+
+Step-6. Fork the linux repo : ```https://github.com/torvalds/linux``` and clone it into your vm  
+
+Step-7. ```cp /boot/config-5.11.0-1029-gcp ~/linux/.config```  
+
+Step-8. Create a directory cmpe-283 inside the cloned repo  
+
+Step-9. Copy the files(cmpe283-1.c & Makefile) provided on canvas to the directory  
+
 Step-10. Run the command ```make```<br />
 	 If it errors with invalid kernel configuration, then run <br />
 	```make oldconfig```<br />
