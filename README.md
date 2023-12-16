@@ -63,7 +63,7 @@ gcloud compute instances create cmpe283-vm-us --enable-nested-virtualization \
 --create-disk=auto-delete=yes,boot=yes,device-name=instance-1,image=projects/ubuntu-os-cloud/global/images/ubuntu-2004-focal-v20220204,mode=rw,size=200,type=projects/cmpe-283-f23/zones/us-central1-a/diskTypes/pd-ssd \
 --metadata=ssh-keys="<key>"
 ```
-<br /><br />
+<br />
 
 Step-3. Add the ssh keys to the VM<br /><br />
 Step-4. Verify if nested virtualization is enabled or not using the command<br />
