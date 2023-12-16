@@ -70,7 +70,7 @@ Step-4. Verify if nested virtualization is enabled or not using the command<br /
    ```cat /proc/cpuinfo | grep vmx```<br />
    This should return vmx flags<br />
 Step-5. Run the following commands to install requirements<br />
-	```
+```
 	sudo apt-get update
         sudo apt-get install bison
         sudo apt-get install make
@@ -78,7 +78,7 @@ Step-5. Run the following commands to install requirements<br />
         sudo apt-get install gcc
         sudo apt-get install libssl-dev
         sudo apt-get install libelf-dev
-        ```
+```
 Step-6. Fork the linux repo : ```https://github.com/torvalds/linux``` and clone it into your vm.<br />
 Step-7. ```cp /boot/config-5.11.0-1029-gcp ~/linux/.config``` <br />
 Step-8. Create a directory cmpe-283 inside the cloned repo<br />
@@ -89,7 +89,7 @@ Step-10. Run the command ```make```<br />
 	Keep pressing enter to finish setting different options to default value.<br />
 Step-11. Try to run make again. For us, as the linux version from git was matching with the linux version installed, make was successful.<br />
 Step-12. In case, make fails again. This is because of version mismatch. In such case, run:<br />
-	```
+```
 	make clean
 
 	make -j 8 modules
@@ -101,8 +101,7 @@ Step-12. In case, make fails again. This is because of version mismatch. In such
 	sudo make -j 4 install
 
 	sudo reboot
-
-	```  
+```
 
 	8 is number of cpus <br />
 
