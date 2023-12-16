@@ -55,6 +55,69 @@ Upasana focused on the latter stages of the assignment, building upon the ground
 
 2. Describe in detail the steps you used to complete the assignment.
 
+1) Create a GCP account. You'll get 300$ credit if you signup with student account<br />
+2) Create a project in GCP and create a VM in the project using the command<br />
+```
+gcloud compute instances create cmpe283-vm-us --enable-nested-virtualization \
+--zone=us-central1-a --machine-type=n2-standard-8 --network-interface=network-tier=PREMIUM,subnet=default \
+--create-disk=auto-delete=yes,boot=yes,device-name=instance-1,image=projects/ubuntu-os-cloud/global/images/ubuntu-2004-focal-v20220204,mode=rw,size=200,type=projects/cmpe-283-f23/zones/us-central1-a/diskTypes/pd-ssd \
+--metadata=ssh-keys="<key>"
+```
+<br />
+
+3) Add the ssh keys to the VM<br />
+4) Verify if nested virtualization is enabled or not using the command<br />
+   ```cat /proc/cpuinfo | grep vmx```<br />
+   This should return vmx flags<br />
+5) Run the following commands to install requirements<br />
+	    ```
+	    sudo apt-get update
+        sudo apt-get install bison
+        sudo apt-get install make
+        sudo apt-get install flex
+        sudo apt-get install gcc
+        sudo apt-get install libssl-dev
+        sudo apt-get install libelf-dev
+
+        ```
+        <br />
+6) Fork the linux repo : ```https://github.com/torvalds/linux``` and clone it into your vm.<br />
+7) ```cp /boot/config-5.11.0-1029-gcp ~/linux/.config``` <br />
+8) Create a directory cmpe-283 inside the cloned repo<br />
+9) Copy the files(cmpe283-1.c & Makefile) provided on canvas to the directory<br />
+10) Run the command ```make```<br />
+	If it errors with invalid kernel configuration, then run <br />
+	```make oldconfig```<br />
+	keep pressing enter to finish setting different options to default value.<br />
+11) Try to run make again. For us, as the linux version from git was matching with the linux version installed, make was successful.<br />
+12) In case, make fails again. This is because of version mismatch. In such case, run:<br />
+	```
+	make clean
+
+	make -j 8 modules
+
+	make -j 8
+
+	sudo make -j 8 INSTALL_MOD_STRIP=1 modules_install
+
+	sudo make -j 4 install
+
+	sudo reboot
+
+	```  
+
+	8 is number of cpus <br />
+
+	This might take hrs depending on VM speed<br />
+13) Run uname -a to verify the version again to match the version of linux cloned from git<br />
+14) Run make to verify if it is successful<br />
+15) Run ```sudo insmod cmpe281-1.ko```<br />
+14) Run ```dmesg```<br />
+
+	You can now see the output of the code given by the professor. Modify the C file accordingly, then run sudo rmmod cmpe283-1 and continue from make command. 
+
+
+
 
 
 
