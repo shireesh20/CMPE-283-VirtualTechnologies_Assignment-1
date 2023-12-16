@@ -55,8 +55,8 @@ implemented/researched.
 <br />
 2. Describe in detail the steps you used to complete the assignment.
 
-Step-1. Create a GCP account. You'll get 300$ credit if you signup with student account<br /><br />
-Step-2. Create a project in GCP and create a VM in the project using the command<br /><br />
+Step-1. Create a GCP account. You'll get 300$ credit if you signup with student account<br  />
+Step-2. Create a project in GCP and create a VM in the project using the command<br  />
 ```
 gcloud compute instances create cmpe283-vm-us --enable-nested-virtualization \
 --zone=us-central1-a --machine-type=n2-standard-8 --network-interface=network-tier=PREMIUM,subnet=default \
