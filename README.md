@@ -1,10 +1,10 @@
 # CMPE-283-Virtual Technologies_Assignment-1
 
-Assignment 1: Discovering VMX Features
+## Assignment 1 - Discovering VMX Features
 
-Student names: Upasana Kumar , Shireesh Vennamaneni
+Student names: <a href="https://www.linkedin.com/in/upasana-kumar/"> Upasana Kumar</a>, <a href="https://www.linkedin.com/in/shireesh-vennamaneni-9b906914a/">Shireesh Vennamaneni</a>
 
-University Name: San Jose State University
+University Name: <a href="https://www.sjsu.edu/">San Jose State University</a>
 
 Prerequisites:-
 You require a machine that supports Linux and has VMX virtualization features available. Depending on your hardware and software setup, it might be possible to run this within a virtual machine, but this is not guaranteed.
