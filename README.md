@@ -13,7 +13,7 @@ Assignment Details:-
 We reviewed the Intel SDM supplied by our professor and the lecture related to this assignment.
 Our goal is to identify specific features on our GCP VM.
 
-##Demo Screenshots
+## Demo Screenshots
 
 1. Pinbased (provided by professor Mike as codebase)
 
@@ -43,7 +43,7 @@ Our goal is to identify specific features on our GCP VM.
 
 
 
-##Questions:-
+## Questions:-
 
 1. For each member in your team, provide 1 paragraph detailing what parts of the lab that member
 implemented/researched.
@@ -55,20 +55,20 @@ implemented/researched.
 <br />
 2. Describe in detail the steps you used to complete the assignment.
 
-Step-1. Create a GCP account. You'll get 300$ credit if you signup with student account<br />
-Step-2. Create a project in GCP and create a VM in the project using the command<br />
+Step-1. Create a GCP account. You'll get 300$ credit if you signup with student account<br /><br />
+Step-2. Create a project in GCP and create a VM in the project using the command<br /><br />
 ```
 gcloud compute instances create cmpe283-vm-us --enable-nested-virtualization \
 --zone=us-central1-a --machine-type=n2-standard-8 --network-interface=network-tier=PREMIUM,subnet=default \
 --create-disk=auto-delete=yes,boot=yes,device-name=instance-1,image=projects/ubuntu-os-cloud/global/images/ubuntu-2004-focal-v20220204,mode=rw,size=200,type=projects/cmpe-283-f23/zones/us-central1-a/diskTypes/pd-ssd \
 --metadata=ssh-keys="<key>"
 ```
-<br />
+<br /><br />
 
-Step-3. Add the ssh keys to the VM<br />
+Step-3. Add the ssh keys to the VM<br /><br />
 Step-4. Verify if nested virtualization is enabled or not using the command<br />
    ```cat /proc/cpuinfo | grep vmx```<br />
-   This should return vmx flags<br />
+   This should return vmx flags<br /><br />
 Step-5. Run the following commands to install requirements<br />
 ```
 	sudo apt-get update
@@ -79,15 +79,16 @@ Step-5. Run the following commands to install requirements<br />
         sudo apt-get install libssl-dev
         sudo apt-get install libelf-dev
 ```
-Step-6. Fork the linux repo : ```https://github.com/torvalds/linux``` and clone it into your vm.<br />
-Step-7. ```cp /boot/config-5.11.0-1029-gcp ~/linux/.config``` <br />
-Step-8. Create a directory cmpe-283 inside the cloned repo<br />
-Step-9. Copy the files(cmpe283-1.c & Makefile) provided on canvas to the directory<br />
+<br />
+Step-6. Fork the linux repo : ```https://github.com/torvalds/linux``` and clone it into your vm.<br /><br />
+Step-7. ```cp /boot/config-5.11.0-1029-gcp ~/linux/.config``` <br /><br />
+Step-8. Create a directory cmpe-283 inside the cloned repo<br /><br />
+Step-9. Copy the files(cmpe283-1.c & Makefile) provided on canvas to the directory<br /><br />
 Step-10. Run the command ```make```<br />
 	 If it errors with invalid kernel configuration, then run <br />
 	```make oldconfig```<br />
-	Keep pressing enter to finish setting different options to default value.<br />
-Step-11. Try to run make again. For us, as the linux version from git was matching with the linux version installed, make was successful.<br />
+	Keep pressing enter to finish setting different options to default value.<br /><br />
+Step-11. Try to run make again. For us, as the linux version from git was matching with the linux version installed, make was successful.<br /><br />
 Step-12. In case, make fails again. This is because of version mismatch. In such case, run:<br />
 ```
 	make clean
@@ -105,10 +106,10 @@ Step-12. In case, make fails again. This is because of version mismatch. In such
 
 	8 is number of cpus <br />
 
-	This might take hrs depending on VM speed<br />
-Step-13. Run uname -a to verify the version again to match the version of linux cloned from git<br />
-Step-14. Run make to verify if it is successful<br />
-Step-15. Run ```sudo insmod cmpe281-1.ko```<br />
+	This might take hrs depending on VM speed<br /><br />
+Step-13. Run uname -a to verify the version again to match the version of linux cloned from git<br /><br />
+Step-14. Run make to verify if it is successful<br /><br />
+Step-15. Run ```sudo insmod cmpe281-1.ko```<br /><br />
 Step-16. Run ```dmesg```<br />
 	You can now see the output of the code given by the professor. Modify the C file accordingly, then run sudo rmmod cmpe283-1 and continue from make command. 
 
