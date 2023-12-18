@@ -72,7 +72,7 @@ Step-9. Copy the files(cmpe283-1.c & Makefile) provided on canvas to the directo
 
 Step-10. Run the command ```make```. If it errors with invalid kernel configuration, then run ```make oldconfig```. Keep pressing enter to finish setting different options to default value.  
  
-Step-11. Try to run make again. For us, as the linux version from git was matching with the linux version installed, make was successful. For us without kernel install, it was successful. However, we installed the kernel for next assignments. 
+Step-11. Try to run make again. For us, make was successful without any error after configuration setting even though our kernel version was 5.11.0. However, we installed the kernel later during next assignments. 
 
 Step-12. In case, make fails again. This is because of version mismatch. In such case, run:  
 
