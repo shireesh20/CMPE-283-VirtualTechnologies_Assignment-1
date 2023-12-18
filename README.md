@@ -18,7 +18,7 @@ Our goal is to identify specific features on our GCP VM.
 Step-1. Clone this repository  
 Step-2. Setup the VM and run the code using the steps mentioned in the answer to Question 2 in the Questions section below.  
 
-
+Pushed the code to the forked linux repository: https://github.com/shireesh20/linux
 
 ## Questions:-  
 
@@ -29,6 +29,7 @@ Step-2. Setup the VM and run the code using the steps mentioned in the answer to
 &emsp; Upasana focused on the latter stages of the assignment, building upon the groundwork established by Shireesh. Her primary responsibility was to enhance the kernel module by adding functionality for querying exit, entry, and tertiary-based MSR controls. This task required a comprehensive understanding of the Intel SDM volume 3 and the ability to interpret and apply complex technical guidelines into practical code, as detailed in the professor's video lecture. She  managed the compilation process, resulting in the creation of .o and .ko files, and played a key role in testing the module through the use of insmod and rmmod tools. Used the dmesg command to review system log messages, was crucial in verifying the successful implementation and functionality of the kernel module.
 
 ### 2. Describe in detail the steps you used to complete the assignment 
+
 
 Step-1. Create a GCP account. You'll get 300$ credit if you signup with student account  
 
@@ -97,6 +98,8 @@ Step-15. Run ```sudo insmod cmpe281-1.ko```
 
 Step-16. Run ```dmesg```<br />
 	You can now see the output of the code given by the professor. Modify the C file accordingly, then run sudo rmmod cmpe283-1 and continue from make command.  
+
+
 
  ## Output Screenshots
 
