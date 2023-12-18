@@ -72,7 +72,7 @@ Step-9. Copy the files(cmpe283-1.c & Makefile) provided on canvas to the directo
 
 Step-10. Run the command ```make```. If it errors with invalid kernel configuration, then run ```make oldconfig```. Keep pressing enter to finish setting different options to default value.  
  
-Step-11. Try to run make again. For us, as the linux version from git was matching with the linux version installed, make was successful.  
+Step-11. Try to run make again. For us, as the linux version from git was matching with the linux version installed, make was successful. For us without kernel install, it was successful. However, we installed the kernel for next assignments. 
 
 Step-12. In case, make fails again. This is because of version mismatch. In such case, run:  
 
@@ -90,7 +90,11 @@ Step-12. In case, make fails again. This is because of version mismatch. In such
 	sudo reboot
 ```
 
-Step-13. Run uname -a to verify the version again to match the version of linux cloned from git  
+Step-13. Run ```uname -a``` to verify the version again to match the version of linux cloned from git  
+
+<img width="462" alt="uname" src="https://github.com/upasanakr/CMPE-283-VirtualTechnologies_Assignment-1/assets/37268397/bf5d4a63-817e-4fd6-a218-8bb282eb0132">  
+
+(This is done during the second assignment as make was successful for us during the first assignment)
 
 Step-14. Run make to verify if it is successful  
 
